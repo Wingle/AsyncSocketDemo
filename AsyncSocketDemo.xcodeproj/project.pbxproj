@@ -18,6 +18,10 @@
 		98DB7D7C17717104009D3188 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 98DB7D7B17717104009D3188 /* Default-568h@2x.png */; };
 		98DB7D7F17717104009D3188 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98DB7D7E17717104009D3188 /* ViewController.m */; };
 		98DB7D8217717104009D3188 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98DB7D8017717104009D3188 /* ViewController.xib */; };
+		98DB7D8D177174B8009D3188 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 98DB7D8A177174B8009D3188 /* GCDAsyncSocket.m */; };
+		98DB7D8E177174B8009D3188 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 98DB7D8C177174B8009D3188 /* GCDAsyncUdpSocket.m */; };
+		98DB7D90177174D9009D3188 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98DB7D8F177174D9009D3188 /* CFNetwork.framework */; };
+		98DB7D9217717B99009D3188 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98DB7D9117717B99009D3188 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,12 @@
 		98DB7D7D17717104009D3188 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		98DB7D7E17717104009D3188 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		98DB7D8117717104009D3188 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		98DB7D89177174B8009D3188 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		98DB7D8A177174B8009D3188 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		98DB7D8B177174B8009D3188 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		98DB7D8C177174B8009D3188 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		98DB7D8F177174D9009D3188 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		98DB7D9117717B99009D3188 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98DB7D9217717B99009D3188 /* Security.framework in Frameworks */,
+				98DB7D90177174D9009D3188 /* CFNetwork.framework in Frameworks */,
 				98DB7D6617717104009D3188 /* UIKit.framework in Frameworks */,
 				98DB7D6817717104009D3188 /* Foundation.framework in Frameworks */,
 				98DB7D6A17717104009D3188 /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +85,8 @@
 		98DB7D6417717104009D3188 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				98DB7D9117717B99009D3188 /* Security.framework */,
+				98DB7D8F177174D9009D3188 /* CFNetwork.framework */,
 				98DB7D6517717104009D3188 /* UIKit.framework */,
 				98DB7D6717717104009D3188 /* Foundation.framework */,
 				98DB7D6917717104009D3188 /* CoreGraphics.framework */,
@@ -83,6 +97,7 @@
 		98DB7D6B17717104009D3188 /* AsyncSocketDemo */ = {
 			isa = PBXGroup;
 			children = (
+				98DB7D88177174B8009D3188 /* TCP */,
 				98DB7D7417717104009D3188 /* AppDelegate.h */,
 				98DB7D7517717104009D3188 /* AppDelegate.m */,
 				98DB7D7D17717104009D3188 /* ViewController.h */,
@@ -105,6 +120,17 @@
 				98DB7D7B17717104009D3188 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		98DB7D88177174B8009D3188 /* TCP */ = {
+			isa = PBXGroup;
+			children = (
+				98DB7D89177174B8009D3188 /* GCDAsyncSocket.h */,
+				98DB7D8A177174B8009D3188 /* GCDAsyncSocket.m */,
+				98DB7D8B177174B8009D3188 /* GCDAsyncUdpSocket.h */,
+				98DB7D8C177174B8009D3188 /* GCDAsyncUdpSocket.m */,
+			);
+			path = TCP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +202,8 @@
 				98DB7D7217717104009D3188 /* main.m in Sources */,
 				98DB7D7617717104009D3188 /* AppDelegate.m in Sources */,
 				98DB7D7F17717104009D3188 /* ViewController.m in Sources */,
+				98DB7D8D177174B8009D3188 /* GCDAsyncSocket.m in Sources */,
+				98DB7D8E177174B8009D3188 /* GCDAsyncUdpSocket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +286,7 @@
 		98DB7D8617717104009D3188 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AsyncSocketDemo/AsyncSocketDemo-Prefix.pch";
 				INFOPLIST_FILE = "AsyncSocketDemo/AsyncSocketDemo-Info.plist";
@@ -269,6 +298,7 @@
 		98DB7D8717717104009D3188 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AsyncSocketDemo/AsyncSocketDemo-Prefix.pch";
 				INFOPLIST_FILE = "AsyncSocketDemo/AsyncSocketDemo-Info.plist";
